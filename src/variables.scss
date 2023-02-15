@@ -1,0 +1,120 @@
+$mainFont: 'Saira', sans-serif;
+$backgroundColor: rgb(6, 8, 14);
+$darkColor1: rgb(9,10,26);
+$darkColor2: rgb(38,38,38);
+$darkColor3: #000b14;
+$goldenColor: rgb(250, 239, 37);
+$goldenColor2: rgb(236, 193, 0);
+$goldenColor22: rgb(209, 171, 3);
+$darkYellowColor: rgb(156,148,16);
+$path: '/assets/images/';
+
+// values: {
+//     xs: 0,
+//     sm: 600,
+//     md: 900,
+//     lg:1100,
+//     xl:1620
+//   }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+//BUTTON
+
+.bn5 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+
+  padding: 20px;
+
+  font-weight: 800;
+  text-transform: uppercase;
+	font-size: 1.5rem;
+	color: #fff;
+  border-radius: 0.5rem;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    $goldenColor2,
+    $goldenColor,
+    $goldenColor22,
+    $goldenColor2,
+    $goldenColor,
+    $goldenColor22,
+    $goldenColor2,
+    $goldenColor,
+    $goldenColor22,
+    #fffb00,
+    $goldenColor,
+    #fffb00,
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #000;
+}
+
+.bn5:active:after {
+  background: transparent;
+  transition: .3s;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+
+.bn5:after {
+  transition: .3s;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #101010;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}

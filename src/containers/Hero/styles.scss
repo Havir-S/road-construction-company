@@ -1,0 +1,233 @@
+@use '../../variables';
+// background: url(variables.$path + '/more/p10.svg');
+
+.hero__background {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 10vh;
+    // background: `url(${images.panorama2})`;
+    // backgroundPosition: center 90%;
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+    color: white;
+    
+}
+
+.hero__background_picture_holder {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    // clipPath: polygon(100% 0, 100% 69%, 100% 90%, 85% 100%, 15% 100%, 0 90%, 0 69%, 0 0),
+    overflow: hidden;
+}
+
+.hero__background_picture_main {
+    background: url(variables.$path + '/more/4.jpg');
+        
+        // backgroundAttachment: local;
+        background-position: center 100%;
+        background-size: cover;
+        position: absolute;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110vh;
+        // clipPath: polygon(0 100%, 50% 90%, 100% 100%, 100% 0%, 0% 0%)
+        // clipPath: polygon(100% 0, 100% 69%, 100% 90%, 85% 100%, 15% 100%, 0 90%, 0 69%, 0 0),
+}
+
+
+
+.hero__background_picture2 {
+    background: url(variables.$path + '/dark2a.png');
+    background-position: bottom center;
+    background-size: cover;
+    // backgroundRepeat: repeat no-repeat;
+    position: absolute;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    // clipPath: polygon(0 100%, 50% 90%, 100% 100%, 100% 0%, 0% 0%)
+    // clipPath: polygon(100% 0, 100% 69%, 100% 90%, 85% 100%, 15% 100%, 0 90%, 0 69%, 0 0),
+}
+
+.hero__main_holder {
+    max-width: 1200;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    .sign {
+        font-size: 6rem;
+    }
+}
+
+.hero__main_holder_textAbv {
+    font-size: 3rem;
+}
+
+.hero__main_holder_text {
+    
+    font-size: 4rem;
+    text-shadow: 0 5px 6px rgba(0,0,0,1);
+    color: #fff;
+    
+};
+
+.hero__main_holder_text_sub {
+    margin: 10px 20px;
+    color: #ddd;
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 800px
+};
+
+
+.hero__buttonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 0;
+    gap: 15px
+}
+.hero_chevron {
+
+    position: absolute;
+    bottom: 150px;
+}
+
+@media only screen and (max-width: 1310px) {
+    .hero__main_holder_text {
+        font-size: 5rem !important;
+    }
+    .hero__main_holder_textAbv {
+               
+                font-size: 2.5rem;
+    }
+        
+}
+
+@media only screen and (max-width: 1100px) {
+    .hero__main_holder_text {
+        font-size: 4.4rem !important;
+    }
+    .hero__main_holder_text_sub {
+        font-size: 1rem;
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero__main_holder_text {
+        font-size: 3.7rem !important;
+    }
+
+    .hero__main_holder_textAbv {
+               
+        font-size: 2rem;
+    }
+
+    .hero__main_holder_text_sub {
+
+        font-size: .8rem;
+        width: 100%;
+
+    };
+
+    
+
+    .arrows {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 570px) {
+    .hero__buttonBox {
+        flex-direction: column;
+        width: 70%;
+        
+        .button--telesto {
+            margin: 0;
+            width: 100%;
+            font-size: 1.2rem;
+        }
+    }
+
+    
+
+    .hero__main_holder {
+        width: 400px;
+
+    }
+}
+
+@media only screen and (max-width: 435px) {
+    .hero__main_holder {
+        width: 100%;
+
+        .sign {
+            font-size: 2.6rem !important;
+        }
+    }
+    .hero__main_holder_textAbv {
+        font-size: 1.3rem;
+    }
+    .hero__main_holder_text_sub {
+        margin: 10px 20px;
+        color: #ddd;
+        font-size: .8rem;
+        width: 80%;
+    };
+}
+
+
+
+// @media only screen and (max-width: 450px) {
+//     .hero__main_holder {
+//         max-width: 100%;
+//         text-align: center;
+//         margin: 0 auto;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         z-index: 5;
+//         .sign {
+//             font-size: 3.5rem;
+//         }
+//     }
+
+//     .hero__main_holder_textAbv {
+//         margin-top: 50px;
+//         font-size: 2rem;
+//     }
+
+//     .hero__main_holder_text_sub {
+        
+//         font-size: 1rem;
+//     }
+
+//     .hero__buttonBox {
+//         flex-direction: column;
+        
+//         .button--telesto {
+//             margin: 0;
+//             font-size: 1.5rem;
+//         }
+//     }
+// }

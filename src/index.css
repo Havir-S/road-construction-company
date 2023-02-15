@@ -1,0 +1,523 @@
+/* ///////////////////////////////// MAIN VALUES */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+}
+:root {
+    font-family: 'Saira', sans-serif;
+    --backgroundColor: rgb(6, 8, 14);
+    --darkColor1: rgb(9,10,26);
+    --darkColor2: rgb(38,38,38);
+    --darkColor3: #000b14;
+    --goldenColor: rgb(250, 239, 37);
+    --goldenColor2: rgb(236, 193, 0);
+    --goldenColor22: rgb(209, 171, 3);
+    --darkYellowColor: rgb(156,148,16);
+    --redLight: rgb(255, 0, 0);
+    --redLightBoxShadow: 0px 2px 6px 3px rgba(255, 0, 0, 0.3);
+    --orangeLight: rgb(255, 183, 0);
+    --orangeLightBoxShadow: 0px 2px 6px 3px rgba(255, 230, 0, 0.3);
+    --greenLight: rgb(0, 255, 25);
+    --greenLightBoxShadow: 0px 2px 6px 3px rgba(86, 255, 6, 0.3);
+}
+
+body {
+  /* background-color: rgb(38,38,38); */
+  background-color: var(--backgroundColor);
+  overflow: hidden;
+}
+
+.nav-active {
+    background-color: red !important;
+}
+
+/* //////////////////////////// SCROLLBAR */
+
+:root::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #131313;
+}
+
+:root::-webkit-scrollbar
+{
+	width: auto;
+
+
+}
+
+:root::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(250, 234, 18)),
+									   color-stop(0.72, rgb(250, 234, 18)),
+									   color-stop(0.86, rgb(250, 234, 18)));
+
+}
+
+
+/* //////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////////////// NAVBAR */
+
+/* ///////////////////////////////////////////////////// HERO*/
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// ABOUTUS */
+
+@keyframes buildingsAppear {
+  0% { bottom: -100%}
+  100% { bottom: 0}
+}
+
+.trafficSign-left {
+
+}
+
+.trafficSign-right {
+
+}
+
+.servicesVideo {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@keyframes cautionTapeAnimation {
+  0% {}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// Questions */
+
+.accordion-holder .MuiAccordion-root {
+  margin: 10px auto;
+  transition: all .2s linear;
+}
+
+.accordion-holder .MuiAccordion-root:before {
+  /* content: "aaa" */
+}
+
+.accordion-holder .Mui-expanded {
+  transition: all .2s linear;
+
+  /* border-bottom-right-radius: 50px; */
+}
+
+.accordion-holder .MuiAccordionSummary-root {
+  background-color: var(--goldenColor22);
+  text-align: left;
+  transition: all .3s ease-in-out;
+  
+  /* border-bottom: 4px solid rgba(0,0,0,1); */
+  /* box-shadow: 0 4px 1px 0 rgba(0,0,0,.4); */
+}
+
+.accordion-holder .MuiAccordionSummary-root:hover {
+  background-color: var(--goldenColor2);
+  transition: all .3s ease-in-out;
+}
+
+.accordion-holder .MuiAccordionSummary-root p {
+  font-family: 'Saira', Courier, monospace;
+  font-size: 1.6rem;
+  /* background-color: var(--goldenColor2); */
+}
+
+/* .accordion-holder .MuiAccordionSummary-root:before {
+  content: '';
+  width: 8px;
+  margin-right: 5px;
+  height: 100%;
+  background-color: #000;
+} */
+
+.accordion-holder .Mui-expanded .MuiAccordionSummary-root {
+  background-color: var(--goldenColor2);
+}
+
+.accordion-holder .MuiCollapse-root {
+  background-color: var(--darkColor1);
+  /* width: 90%; */
+  text-align: center;
+  border: 2px solid var(--goldenColor2);
+  border-top: 0;
+  border-radius: 0 0 50px 50px;
+}
+
+.accordion-holder .Mui-expanded .MuiCollapse-root p {
+  position: relative;
+  font-family: 'Abel', Courier, monospace;
+  font-weight: bold;
+  width: 80%;
+  margin: 10px auto;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.accordion-holder .Mui-expanded .MuiCollapse-root p:before {
+  content: '';
+  width: 50%;
+  margin: 15px auto;
+  position: relative;
+  top: 0;
+  border-top: 5px solid var(--goldenColor2);
+  display: block;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// CONTACT */
+
+
+@keyframes float {
+	0% {
+
+		transform: translatey(-70%);
+	}
+	50% {
+
+		transform: translatey(-55%);
+	}
+	100% {
+
+		transform: translatey(-70%);
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// WORK PROCESS */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// FOOTER */
+
+.footerButton {
+  margin:0 8px 0 0;
+}
+
+@keyframes cautionPaperAnimation {
+	0% {
+
+		left: -50%;
+	}
+	100% {
+
+		left: 0;
+	}
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #050505;
+	border: none;
+	padding: 1.5rem 2rem;
+    min-width: 200px;
+    font-size: 2rem;
+    font-weight: bold;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.button--telesto {
+
+	font-weight: 800;
+  text-transform: uppercase;
+	font-size: 1.5rem;
+	color: #fff;
+  border-radius: 0.5rem;
+  
+}
+
+.button--telesto {
+  overflow: hidden;
+}
+
+
+
+.button--telesto span {
+	display: block;
+	position: relative;
+	z-index: 1;
+  border-radius: 0.5rem;
+}
+
+.button--telesto > span {
+	overflow: hidden;
+	mix-blend-mode: difference;
+}
+
+.button--telesto:hover > span > span {
+	animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
+}
+
+@keyframes MoveRightInitial {
+	to {
+		transform: translate3d(105%,0,0);
+	}
+}
+
+@keyframes MoveRightEnd {
+	from {
+		transform: translate3d(-100%,0,0);
+	}
+	to {
+		transform: translate3d(0,0,0);
+	}
+}
+
+.button--telesto::before,
+.button--telesto::after {
+	content: '';
+	background: #000;
+}
+
+.button--telesto::before {
+	width: 135%;
+	-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+	transform: translate3d(-100%,0,0);
+}
+
+.button--telesto:hover::before {
+	transform: translate3d(0,0,0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto::after {
+	width: 105%;
+	transform: translate3d(100%,0,0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto:hover::after {
+	transform: translate3d(0,0,0);
+	transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* rgb(250, 239, 37) */
+/* rgb(156, 148, 16) */
+/* rgb(191, 183, 36) */
+
+.sign {
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #141414,
+      transparent
+    );
+    
+    text-transform: uppercase;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem rgb(156, 148, 16),
+      -0.2rem 0.1rem 1rem rgb(156, 148, 16), 0.2rem 0.1rem 1rem rgb(156, 148, 16),
+      0 -0.5rem 2rem var(--goldenColor), 0 0.5rem 3rem var(--goldenColor);
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #faffe6;
+      text-shadow: 0 0 0.6rem #faffe6, 0 0 1.5rem rgb(156, 148, 16),
+        -0.2rem 0.1rem 1rem rgb(156, 148, 16), 0.2rem 0.1rem 1rem rgb(156, 148, 16),
+        0 -0.5rem 2rem var(--goldenColor), 0 0.5rem 3rem var(--goldenColor);
+    }
+    28%,
+    33% {
+      color: #9b9c30;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: var(--goldenColor);
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 9s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 5s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #444444;
+      text-shadow: none;
+    }
+    100% {
+      color: #faffe6;
+      text-shadow: 0 0 0.6rem #faffe6, 0 0 1.5rem rgb(156, 148, 16),
+        -0.2rem 0.1rem 1rem rgb(156, 148, 16), 0.2rem 0.1rem 1rem rgb(156, 148, 16),
+        0 -0.5rem 2rem var(--goldenColor), 0 0.5rem 3rem var(--goldenColor);
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

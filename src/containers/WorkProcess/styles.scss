@@ -1,0 +1,182 @@
+@use '../../variables';
+// background: url(variables.$path + '/more/p10.svg');
+
+
+.workProcess__background {
+    background: variables.$darkColor1;
+    background: url(variables.$path + '/more/p19.svg');
+    background-position: 80% -45%;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    padding: 100px 0 40px
+};
+.workProcess__mainContainer {
+    margin: auto;
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 4.8rem;
+    }
+    h3 {
+        font-family: Saira, Roboto;
+        margin-top: 30px;
+        font-size: 2.5rem
+    }
+};
+.workProcess__mainContainer_dots {
+    
+    padding: 5px;
+    margin: 15px auto 0;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+        border-radius: 50%;
+        background: variables.$goldenColor2;
+        width: 13px;
+        height: 13px
+    }
+};
+.workProcess__workContainer {
+    // border: 1px solid red;
+    height: max-content;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    .workProcess-item {
+        height: 100%;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .workprocess-subtext {
+            margin-top: 70px;
+            font-style: italic;
+            font-size: .9rem
+        };
+        &:hover {
+            color: variables.$goldenColor2;
+            
+        };
+        &:hover .timeline {
+            transition: all .15s linear;
+            &::after {
+                box-shadow: 0 0 30px 3px variables.$goldenColor, 0 0 50px 7px variables.$goldenColor2, 0 0 70px 15px variables.$goldenColor22 ;
+                border: 3px solid variables.$goldenColor2;
+                
+                transition: all .15s linear;
+                width:30px;
+                height:30px;
+            };
+        };
+        .timeline {
+            border: 3px solid variables.$goldenColor22;
+            width: 100%;
+            position: relative;
+            transition: all .15s linear;
+            &::after {
+                content: "";
+                position: absolute;
+                width:20px;
+                height:20px;
+                border: 6px solid variables.$goldenColor2;
+                background: variables.$goldenColor22;
+                box-shadow: 0 0 30px 3px variables.$goldenColor, 0 0 50px 7px variables.$goldenColor22, 0 0 70px 15px rgba(0,0,0,.3) ;
+                
+                border-radius: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%)
+            }
+        }
+
+    }
+};
+h2, h4 {
+    transition: all .15s ease;
+}
+.workProcess__workContainer_textContainer {
+    // border: 1px solid orange;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h2, h4 {
+        
+        margin-bottom: 5px;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+};
+
+@media only screen and (max-width: 1490px) {
+    .workProcess__workContainer_textContainer {
+        // border: 1px solid orange;
+        width: 100%;
+        h2 {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+    };
+    .workProcess__workContainer {
+        margin: 0 20px;
+        .workProcess-item {
+            .workprocess-subtext {
+                width: 100%;
+                font-size: .8rem;
+            }
+            .timeline {
+                width: 100%;
+            }
+        }
+    }
+
+@media only screen and (max-width: 1130px) {
+    .workProcess__mainContainer {
+        margin: auto;
+        text-align: center;
+        color: white;
+        h1 {
+            font-size: 4rem;
+        }
+        h3 {
+            font-family: Saira, Roboto;
+            margin-top: 30px;
+            font-size: 1.8rem
+        }
+    };
+
+    .workProcess__workContainer_textContainer {
+        h2 {
+            font-size: 1.05rem;
+        }
+    };
+    .workProcess__workContainer {
+        margin: 0 20px;
+        .workProcess-item {
+            .workprocess-subtext {
+                width: 100%;
+                font-size: .7rem;
+            }
+            .timeline {
+                width: 100%;
+            }
+        }
+    }
+}   
+}
+
+@media only screen and (max-width: 845px) {
+    .workProcess__background {
+        display: none;
+    }
+}

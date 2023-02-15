@@ -1,0 +1,820 @@
+@use '../../variables';
+// background: url(variables.$path + '/more/p10.svg');
+
+.contact__background {
+        padding-top: 50px;
+        position: relative;
+        margin-top: -5px;
+        margin-bottom: 0;
+        z-index: 2;
+        background-image:linear-gradient(0deg, transparent 95%, rgb(0,0,0)), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1015%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(6%2c 8%2c 14%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c670.165C127.598%2c665.676%2c248.903%2c623.414%2c357.652%2c556.517C468.013%2c488.629%2c584.653%2c408.588%2c625.251%2c285.543C664.869%2c165.468%2c600.359%2c40.592%2c568.228%2c-81.699C539.756%2c-190.062%2c514.474%2c-298.028%2c448.188%2c-388.357C377.903%2c-484.135%2c294.641%2c-582.053%2c179.522%2c-611.395C65.512%2c-640.455%2c-50.843%2c-588.346%2c-159.513%2c-543.251C-258.783%2c-502.057%2c-342.316%2c-438.377%2c-418.97%2c-363.04C-501.57%2c-281.86%2c-588.625%2c-200.429%2c-621.365%2c-89.339C-656.677%2c30.478%2c-650.906%2c160.331%2c-607.764%2c277.556C-562.65%2c400.139%2c-483.916%2c511.384%2c-374.197%2c582.261C-264.348%2c653.222%2c-130.695%2c674.763%2c0%2c670.165' fill='%23040509'%3e%3c/path%3e%3cpath d='M1440 1203.449C1562.172 1198.701 1585.972 1012.723 1683.9180000000001 939.544 1771.299 874.259 1905.92 888.9159999999999 1974.505 804.1 2048.38 712.7429999999999 2088.843 585.061 2063.298 470.383 2038.113 357.322 1936.437 278.977 1842.45 211.27499999999998 1762.859 153.94299999999998 1666.805 134.24900000000002 1570.537 115.43200000000002 1482.4470000000001 98.214 1395.721 93.892 1306.867 106.59100000000001 1205.203 121.12099999999998 1102.9769999999999 136.62599999999998 1018.068 194.394 916.65 263.394 812.152 346.74 779.926 465.096 746.631 587.38 764.269 733.8389999999999 844.471 831.969 922.438 927.364 1079.0529999999999 893.7819999999999 1183.586 958.988 1285.853 1022.78 1319.559 1208.129 1440 1203.449' fill='%23080b13'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1015'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+        background-blend-mode: normal;
+        background-size: contain, cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+}
+
+.contact__title {
+    .servicesTypography_small {
+        margin: 50px auto;
+        padding: 0 10px;
+    }
+    h2 {
+
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+
+    position: relative;
+    width: max-content;
+    margin: 0 auto 80px;
+    &::after {
+        position: absolute;
+        border-bottom: 12px solid variables.$goldenColor2;
+        width: 120%;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,0);
+        content: '';
+    }
+    };
+};
+
+.contact__row {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items:center ;
+    margin:0 auto;
+    
+    transition: all 0.2 ease;
+    .contactDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        transition: all .2s ease;
+        width: 300px;
+        cursor: pointer;
+    };
+    img:hover {
+        transition: all .2s ease;
+        transform: scale(1.1);
+    };
+    p {
+        margin: auto;
+        width:max-content;
+        font-size: 1.4rem;
+        font-weight: bold;
+    };
+}
+
+.contact__secondRow {
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 140px;
+};
+
+.contact__writeToUsBox {
+    position: relative;
+    display: inline-block;
+    input {
+        background: transparent;
+        outline: none;
+        color: variables.$goldenColor2;
+        margin: 5px;
+        border-radius: 5px;
+        box-shadow: 0 10px 5px rgba(0,0,0,.8);
+        font-weight: bold;
+        padding: 20px;
+        padding-left: 15px;
+        width: 400px;
+        font-size: 2rem;
+        display: block;
+        border: 2px solid variables.$goldenColor2;
+
+        box-sizing: border-box;
+
+    };
+};
+
+.contact__writeToUsBoxFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    // "& input[type=submit]": {
+    //     width: 150px;
+    //     height: 150px;
+    //     background: `url(${images.d3a})`;
+    //     backgroundSize: 150px;
+    //     backgroundRepeat: no-repeat;
+    //     "&::after": {
+    //         content: "aaaa"
+    //     }
+    // }
+    input[type='submit'] {
+        width: 240px;
+        cursor: pointer;
+    };
+
+};
+
+input.notFinished {
+    color: #555;
+    cursor:not-allowed;
+}
+
+.PhoneInput {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    .PhoneInputCountry {
+        position: absolute;
+        width: max-content;
+        color: white;
+        
+        fill: white;
+        top:50%;
+        left: 15px;
+        height: 50%;
+        transform: translate(0, -50%);
+        .PhoneInputCountryIcon  {
+            text-align: left;
+            
+            .PhoneInputCountryIconImg {
+                
+                width: max-content;
+                
+            }
+        }
+    }
+    input {
+        padding-left: 50px;
+
+        
+    }
+}
+
+.contact__writeToUsBox_textAreaHolder {
+    width: max-content;
+    position: relative;
+    background: variables.$backgroundColor;
+    margin-bottom: 8px;
+    
+    &::before { 
+        content: "aaaa";
+        border: 3px solid variables.$goldenColor2;
+        border-radius: 2px;
+        position: absolute;
+        width: 45px;
+        top: 60%;
+        left: 10%;
+        height: 200px;
+        z-index: -1
+    };
+    &::after { 
+        content: "";
+        border: 3px solid variables.$goldenColor2;
+        border-radius: 2px;
+        position: absolute;
+        width: 45px;
+        top: 60%;
+        right: 10%;
+        height: 200px;
+        z-index: -1
+    };
+    textarea {
+        background: transparent;
+        position: relative;
+        outline: none;
+        color: variables.$goldenColor2;
+        margin: 5px;
+        border-radius: 5px;
+        box-shadow: 0 10px 5px rgba(0,0,0,.8);
+        font-weight: bold;
+        padding: 20px;
+        padding-left: 15px;
+        width: 650px;
+        font-size: 2rem;
+        display: block;
+        border: 2px solid variables.$goldenColor2;
+        height: 250px;
+        resize: none;
+
+    };
+    input[type='submit'] {
+        display: none;
+        
+    };
+};
+
+.contact__writeToUsBox_arrowText {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 52%;
+    left: 90%;
+    transform: translate(0, -50%);
+    animation: float 4s linear infinite;
+    .arrowPointer {
+        position: absolute;
+        // border: 1px solid green;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        background: url(variables.$path + '/more/pattern14.svg');
+        background-size: 300px 300px;
+        transform: rotate(-60deg);
+        background-position: center;
+    };
+    p {
+        color: white;
+        position: absolute;
+        // border: 1px solid blue;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: bold;
+        left: -80%;
+        bottom: 85%;
+        width: max-content
+    }
+};
+
+.contact__googleMapsBox {
+    width: max-content;
+    position: relative;
+    display: inline-block;
+    text-align:center;
+    
+    p {
+        position: relative;
+        color: variables.$goldenColor2;
+        border-radius: 5px;
+        box-shadow: 0 10px 5px rgba(0,0,0,.8);
+        font-weight: bold;
+        padding: 10px 5px;
+        margin: 3px 0;
+        width: 300px;
+        font-size: 1.8rem;
+        border: 2px solid variables.$goldenColor2;
+    };
+    p:last-of-type {
+        margin-bottom:10px;
+        box-shadow: 0 10px 5px rgba(0,0,0,.5);
+    };
+    img {
+        border: 3px solid variables.$goldenColor2;
+        border-radius: 5px;
+        padding: 20px;
+        height:max-content;
+        z-index: 5;
+        background-color: variables.$backgroundColor;
+        box-shadow: 0 10px 5px rgba(0,0,0,.8);
+    };
+    &::before { 
+        content: "";
+        border: 3px solid variables.$goldenColor2;
+        border-radius: 2px;
+        position: absolute;
+        width: 45px;
+        top: 81%;
+        left: 10%;
+        height: 200px;
+        z-index: -1
+    };
+    &::after { 
+        content: "";
+        border: 3px solid variables.$goldenColor2;
+        border-radius: 2px;
+        position: absolute;
+        width: 45px;
+        top: 81%;
+        right: 10%;
+        height: 200px;
+        z-index: -1
+    };
+    .contact__googleMapsBox_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            padding: 5px;
+        }
+    }
+}
+
+.contact__boxBreak {
+    // background: `url(${images.img9})`,
+    background: url(variables.$path + '/more/9.jpg');
+    background-size: cover;
+    // backgroundSize: 300px;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 10px 15px rgba(0,0,0,.6), 0 -10px 15px rgba(0,0,0,.6);
+    position: relative;
+    height: 300px;
+    width: 100%;
+    z-index: 5;
+    }
+
+    .contact__messageSent {
+        border: 4px solid variables.$goldenColor2;
+        border-radius: 15px;
+        padding: 15px;
+        background-color: variables.$backgroundColor;
+        color:  #fff;
+        text-align: center;
+    }
+
+@media only screen and (max-width: 1400px) {
+    .contact__secondRow {
+        margin-top: 50px;
+        .contact__writeToUsBoxFlex {
+            
+            input {
+                width: 300px;
+                font-size: 1.5rem;
+            }
+            input[type='submit'] {
+                width: 230px
+            };
+        }
+        .contact__writeToUsBox_textAreaHolder {
+            textarea {
+                font-size: 1.5rem;
+                width: 540px;
+                height:230px;
+            }
+        }
+        .contact__googleMapsBox_info {
+            p {
+                font-size: 1.5rem;
+                padding: 8px 5px;
+                width: 260px;
+            }
+        }
+        img {
+            width: 540px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    .contact__secondRow {
+        
+        .contact__writeToUsBoxFlex {
+            
+            input {
+                width: 200px;
+                font-size: 1.1rem;
+            }
+            input[type='submit'] {
+                width: 180px
+            };
+        }
+        .contact__writeToUsBox_textAreaHolder {
+            textarea {
+                font-size: 1.2rem;
+                width: 390px;
+                height:180px;
+            }
+        }
+        .contact__googleMapsBox_info {
+            p {
+                font-size: 1.3rem;
+                padding: 6px 2.5px;
+                width: 180px;
+            }
+        }
+        img {
+            width: 390px;
+        }
+
+    }
+
+    .contact__writeToUsBox_arrowText {
+
+        bottom: 48%;
+        left: 85%;
+        transform: translate(0, -50%);
+
+        p {
+            font-size: 1.2rem;
+        }
+    };
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact__row {
+        justify-content: space-evenly;
+        .contactDiv {
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        img {
+            width: 200px;
+        };
+        img:hover {
+            transform: scale(1.05);
+        };
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .contact__row {
+        .contactDiv {
+            min-width: 250px;
+            
+        }
+        img {
+            width: 200px;
+        };
+
+        p {
+            font-size: 1.1rem;
+        };
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .contact__secondRow {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 180px;
+        margin-top: 180px;
+
+        .contact__writeToUsBox  {
+            width: 100%;
+            
+        }
+        .contact__writeToUsBoxFlex {
+            margin: 0 50px;
+            max-width: 400px;
+            input {
+                width: 100%;
+                flex: 2;
+                font-size: 1.3rem;
+            }
+            input[type='submit'] {
+                width: 100%;
+                flex: 1;
+            };
+        }
+        .contact__writeToUsBox_textAreaHolder {
+            width: 80%;
+            margin: 0 50px;
+            textarea {
+                font-size: 1.3rem;
+                width: 100%;
+                height:180px;
+            }
+        }
+        
+    }
+    .contact__googleMapsBox {
+        width: 70%;
+        .contact__googleMapsBox_info {
+            justify-content: center;
+            align-items: center;
+        }
+        .contact__googleMapsBox_info {
+            p {
+                font-size: 1.3rem;
+                padding: 10px 2.5px;
+                width: 60%;
+            }
+        }
+        img {
+            width: 100%;
+        }
+
+    }
+    
+
+    .contact__writeToUsBox_arrowText {
+
+        bottom: 85%;
+        left: 50%;
+        transform: translate(0, -50%);
+
+        p {
+            font-size: 1.4rem;
+            left: -100%;
+        }
+    };
+}
+
+@media only screen and (max-width: 800px) {
+    .servicesTypography_small {
+        margin: 50px auto;
+        padding: 0 30px;
+    }
+    .contact__row {
+
+        .contactDiv {
+            min-width: 180px;
+            width: 100%;
+            
+        }
+        img {
+            width: 180px;
+        };
+        p {
+            font-size: 1rem;
+        };
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .contact__title {
+        .servicesTypography_small {
+            margin: 15px auto;
+        }
+        h2 {
+        margin: 0 auto 50px;
+        };
+    };
+
+    .contact__row {
+        flex-direction: column;
+        
+        p {
+            font-size: 1.7rem;
+        };
+        .contactDiv {
+            flex-direction: row;
+        }
+        .contactDiv:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+        .contactDiv:nth-child(3) {
+            p {
+                font-size: 1.5rem;
+            };
+        }
+        .contactInfo {
+            margin-bottom: 70px;
+        }
+        img {
+            width: 40%;
+        };
+        img:hover {
+            transform: scale(1.05);
+        };
+        
+    }
+
+    .contact__secondRow {
+        margin-top: 90px;
+    }
+
+    .contact__writeToUsBox_arrowText {
+        bottom: 100%;
+        left: 0;
+        animation: none;
+        width: 100%;
+        height: max-content;
+
+        p {
+            font-size: 1.4rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin-bottom: 40px;
+            
+        }
+        .arrowPointer {
+            display: none;
+        }
+    };
+
+    .contact__googleMapsBox {
+        &::before { 
+            height: 150px;
+    
+        };
+        &::after { 
+            height: 150px;
+        };
+    }
+    
+}
+
+@media only screen and (max-width: 550px) {
+    .contact__row {
+        flex-direction: column;
+        .contactDiv {
+            
+            
+        }
+        .contactInfo {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            
+            font-size: 1.3rem;
+        };
+        .contactDiv:nth-child(3) {
+            p {
+                font-size: 1.2rem;
+            };
+        }
+        img {
+            width: 30%;
+        };
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .contact__secondRow {
+        margin-top: 80px;
+        gap: 130px;
+        .contact__writeToUsBox  {
+            width: 100%;
+            
+        }
+        .contact__writeToUsBoxFlex {
+            margin: 0 50px;
+            max-width: 400px;
+            flex-direction: column;
+            align-items: center;
+            input {
+                width: 100%;
+                flex: 2;
+                font-size: 1.3rem;
+            }
+            input[type='submit'] {
+                display: none;
+                
+            };
+        }
+        
+        .contact__writeToUsBox_textAreaHolder {
+            width: 80%;
+            margin: auto;
+            textarea {
+                font-size: 1.3rem;
+                width: 100%;
+                height:180px;
+            }
+            input[type='submit'] {
+                display: block;
+                width: 100%;
+            
+                
+            };
+        }
+        .contact__googleMapsBox_info {
+            p {
+                font-size: 1.1rem;
+                width: 100%;
+            }
+        }
+
+    }
+
+    .contact__boxBreak {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .contact__writeToUsBox_arrowText {
+        p {
+            font-size: 1.2rem;
+        }
+    };
+
+    .contact__row {
+        flex-direction: column;
+        p {
+            font-size: 1.5rem;
+        };
+        .contactDiv {
+            flex-direction: column;
+            img {
+                width: 50%;
+            }
+        }
+        .contactDiv:nth-child(2) {
+            flex-direction: column;
+        }
+        .contactDiv:nth-child(3) {
+            
+            p {
+                font-size: 1.5rem;
+            };
+        }
+    }
+}
+
+@media only screen and (max-width: 365px) {
+
+    .contact__writeToUsBox_arrowText {
+        p {
+            font-size: 1rem;
+        }
+    };
+
+    .contact__row {
+        
+        p {
+            font-size: 1.3rem;
+        };
+        .contactDiv {
+            img {
+                display: none;
+            }
+           
+        }
+        .contactDiv:nth-child(3) {
+            p {
+                font-size: 1.3rem;
+            };
+        }
+    }
+
+    .contact__writeToUsBoxFlex {
+        input {
+            font-size: 1rem !important;
+        }
+    }
+
+    .contact__writeToUsBox_textAreaHolder {
+
+        textarea {
+            font-size: 1rem !important;
+        }
+
+        input[type='submit'] {
+            font-size: 1.3rem;
+        };
+    }
+
+    .contact__googleMapsBox {
+        img {
+            padding: 5px;
+            height: 150px;
+        }
+        &::before { 
+            height: 100px;
+    
+        };
+        &::after { 
+            height: 100px;
+        };
+    }
+
+    .contact__secondRow {
+        margin-bottom: 70px;
+    }
+}
+
+
+@media only screen and (max-width: 300px) {
+    .contact__writeToUsBox_arrowText {
+        p {
+            font-size: .8rem;
+        }
+    };
+
+    .contact__writeToUsBoxFlex {
+        input {
+            font-size: .8rem !important;
+        }
+    }
+
+    .contact__row {
+        p {
+            font-size: 1rem;
+        };
+        .contactDiv {
+            img {
+                display: none;
+            }
+           
+        }
+        .contactDiv:nth-child(3) {
+            p {
+                font-size: 1rem;
+            };
+        }
+    }
+}

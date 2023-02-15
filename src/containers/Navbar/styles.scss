@@ -1,0 +1,251 @@
+@use '../../variables';
+// background: url(variables.$path + '/more/p10.svg');
+
+.appBar {
+    background: transparent;
+    padding: 15px 35px;
+    margin-top: 10px;
+    top: 0; 
+    width: 100%;
+    left: 0;
+    box-shadow: 0;
+    
+    position: absolute;
+    z-index: 10;
+    .navBar-sticky .img-holder img{
+        height: 60px
+    }
+    .cautionPaperFake {
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+.app-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    font-size: 1.2rem;
+    // display: {xs: none,md: inline-block};
+    display: inline-block;
+};
+
+.a_link {
+    text-decoration: none;
+    color: #fff;
+    // margin: {md: 0 5px,lg: 0 10px};
+    margin: 0 10px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.25s linear;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+    color: variables.$goldenColor;
+    };
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 252, 194);
+        position: absolute;
+        left: 0;
+        bottom: -4px; /* this is to match where the border is */
+        transform-origin: left; 
+        transform: scale(0);
+        transition: 0.25s linear;
+    };
+    &:hover::before {
+        transform: scale(1);
+        background-color: var(--goldenColor);
+    };
+    
+};
+.flagBox {
+    display: inline-block;
+    vertical-align: middle;
+    background: var(--backgroundColor);
+    border-radius: 5px;
+    padding: 10px
+}
+.modeBox {
+    display: inline-block;
+}
+.hamburgerMenu {
+    border: 1px solid red;
+    background: red;
+    position: block;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 400px;
+    
+    z-index: 30
+}
+
+
+.hamburgerNavbar {
+    display: none;
+    justify-content:space-around;
+    align-items: center;
+    position: fixed;
+    background: rgba(6, 8, 14, 1);
+    margin: 0 0;
+    left: 0;
+    top: 0;
+    width: 90%;
+    z-index: 10;
+    height: 76px;
+    animation: showHamburgerNavbar .5s ease-in-out;
+    .hamburger {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+    .hamburger_link {
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 4px solid transparent;
+        transition: all 0.25s linear;
+        font-size: 1.3rem;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+        color: variables.$goldenColor;
+        };
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: rgb(255, 252, 194);
+            position: absolute;
+            left: 0;
+            bottom: -10px; /* this is to match where the border is */
+            transform-origin: left; 
+            transform: scale(0);
+            transition: 0.25s linear;
+        };
+        &:hover::before {
+            transform: scale(1);
+            background-color: var(--goldenColor);
+        };
+        
+    };
+}
+
+.hamburgerNavbarMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+
+@keyframes showHamburgerNavbar {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////// 900PX
+
+@media only screen and (max-width: 900px) {
+    
+    .a_link, .flagBox {
+        display: none;
+    }
+    .hamburgerNavbar-active {
+        display: flex;
+    }
+  }
+
+
+
+  
+  
+
+  @media only screen and (max-width: 650px) {
+    .hamburgerNavbarMenu {
+        justify-content: space-around;
+        width: 100%;
+        .hamburger_link {
+            font-size: 1.2rem;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .hamburgerNavbar {
+        justify-content: center;
+        gap: 10px;
+        .hamburger_link {
+            font-size: 1.1rem;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 485px) {
+    .hamburgerNavbar {
+        justify-content: space-around;
+        margin: 0;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        gap: 0;
+        .hamburgerNavbarMenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 80%;
+        }
+        .hamburger {
+            display: block;
+        }
+        .hamburger_link {
+            font-size: 2.6rem;
+            width: 70%;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            border-bottom: 4px solid transparent;
+            transition: all 0.25s linear;
+            position: relative;
+            background-color: variables.$backgroundColor;
+            padding: 10px 15px;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px 1px variables.$goldenColor2;
+            cursor: pointer;
+            &:hover {
+                color: variables.$goldenColor;
+                transform: scale(1.1);
+            };
+            &::before {
+                display: none;
+            };
+        }
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    
+  }
