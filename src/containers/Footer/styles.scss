@@ -1,5 +1,4 @@
 @use '../../variables';
-// background: url(variables.$path + '/more/p10.svg');
 
 .footer__background {
     margin-top: -80px;
@@ -26,10 +25,6 @@
 .footer__mainContainer_cta {
     width: 80%;
     position: relative;
-    // background: `url(${images.cautionPaper2}), rgba(150,150,0,.03)`,
-    // backgroundSize: 900px;
-    // backgroundRepeat: repeat no-repeat;
-    // backgroundBlendMode: multiply;
     border: 1px solid yellow;
     border-radius: 5px;
     top: -60px;

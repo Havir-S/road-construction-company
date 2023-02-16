@@ -1,11 +1,7 @@
 import React, {useEffect} from 'react'
-import questionsStyles from './styles'
-
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
 import './styles.scss'
 import {Question} from '../../components'
-import { images } from '../../constants';
 
 const Questions = () => {
   
@@ -30,16 +26,15 @@ const Questions = () => {
       scrollTrigger: {
         trigger: '#questions',
         start: 'top 80%',
-        // markers: true
       }
     })
 
   }, [])
 
   return (
-    <div sx={questionsStyles.questions__background} className='questions__background' id='questions'>
+    <div className='questions__background' id='questions'>
       <div className='questions__fakeShadow' />
-        <div sx={questionsStyles.questions__mainContainer} className='questions__mainContainer'>
+        <div className='questions__mainContainer'>
             <h4>F A Q</h4>
             <h2>FREQUENTLY ASKED QUESTIONS</h2>
             <div className='questions__mainContainer_questionBox'>
@@ -50,8 +45,6 @@ const Questions = () => {
               <Question question={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} answer={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'} />
               <Question question={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} answer={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'} />
               <Question question={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'} answer={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.'} />
-              
-              
               <h4 style={{fontStyle: 'italic'}} >* Masz inne pytanie? Skontaktuj się z nami w dziale <span style={{color: 'var(--goldenColor)', fontWeight: 'bold', textDecoration: 'underline'}}>KONTAKT</span></h4>
             </div>
         </div>

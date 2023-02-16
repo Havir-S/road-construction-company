@@ -1,9 +1,7 @@
 import img7 from '../assets/images/more/7.jpg'
 import img7a from '../assets/images/more/7a.jpg'
 import img7b from '../assets/images/more/7a.jpg'
-import dark2a from '../assets/images/dark2a.png'
 import officialLogo from '../assets/images/officialLogo.png'
-import officialLogoOnlyPic from '../assets/images/officialLogoOnlyPic.png'
 import officialLogoOnlyPicShadow from '../assets/images/officialLogoOnlyPicShadow.png'
 import officialLogoOnlyPicShadow2 from '../assets/images/officialLogoOnlyPicShadow2.png'
 import dark2 from '../assets/images/dark2.png'
@@ -26,8 +24,7 @@ import contact2 from '../assets/images/contact2.jpg'
 import contact3 from '../assets/images/contact3.jpg'
 import contact4 from '../assets/images/contact4.jpg'
 import questions from '../assets/images/questions.png'
-import questions1 from '../assets/images/questions1.png'
-import questions2 from '../assets/images/questions2.png'
+
 import panorama from '../assets/images/panorama.jpg'
 import panorama2 from '../assets/images/panorama2.jpg'
 import panorama3 from '../assets/images/panorama3.jpg'
@@ -147,10 +144,6 @@ import pattern22 from '../assets/images/more/pattern22.svg'
 import pattern23 from '../assets/images/more/pattern23.svg'
 import pattern24 from '../assets/images/more/pattern24.svg'
 
-import znak1 from '../assets/images/more/znak1.png'
-import znak2 from '../assets/images/more/znak2.png'
-import znak3 from '../assets/images/more/znak3.png'
-
 import p1 from '../assets/images/more/p1.svg'
 import p2 from '../assets/images/more/p2.svg'
 import p3 from '../assets/images/more/p3.svg'
@@ -235,23 +228,11 @@ import panoramaDark from '../assets/images/panoramaDark.png'
 
 
 
-import question from '../assets/images/question.svg'
-import caret from '../assets/images/caret.svg'
-
-import question2 from '../assets/images/question2.svg'
-import caret2 from '../assets/images/caret2.svg'
-
-
-
 import cautionPaper2 from '../assets/images/cautionPaper2.png'
 import panoramaDark2 from '../assets/images/panoramaDark2.png'
-import cautionPaper3 from '../assets/images/cautionPaper3.png'
-import img15a from '../assets/images/more/15a.png'
 import aboutUs1 from '../assets/images/aboutUs.jpg'
 import p4 from '../assets/images/more/p4.svg'
 import p19 from '../assets/images/more/p19.svg'
-import p10 from '../assets/images/more/p10.svg'
-import cranes2 from '../assets/images/cranes2.png'
 import p5 from '../assets/images/more/p5.svg'
 import construction15a from '../assets/images/construction15a.jpg'
 import pattern14 from '../assets/images/more/pattern14.svg'
@@ -265,25 +246,8 @@ import d3 from '../assets/images/d3.png'
 import d3a from '../assets/images/d3a.png'
 import pdfSmall from '../assets/images/pdfSmall.jpg'
 import pdfBig from '../assets/images/pdfBig.jpg'
-import facebookIcon from '../assets/images/facebook.svg'
-import telephoneIcon from '../assets/images/telephone-fill.svg'
-import mailIcon from '../assets/images/envelope-fill.svg'
+
 import img11a from '../assets/images/more/11a.jpg'
-import slice011a from '../assets/images/slice011a.png'
-import slice012a from '../assets/images/slice012a.png'
-import slice013a from '../assets/images/slice013a.png'
-import slice014a from '../assets/images/slice014a.png'
-import slice015a from '../assets/images/slice015a.png'
-import slice021a from '../assets/images/slice021a.png'
-import slice022a from '../assets/images/slice022a.png'
-import slice023a from '../assets/images/slice023a.png'
-import slice024a from '../assets/images/slice024a.png'
-import slice025a from '../assets/images/slice025a.png'
-import slice031a from '../assets/images/slice031a.png'
-import slice032a from '../assets/images/slice032a.png'
-import slice033a from '../assets/images/slice033a.png'
-import slice034a from '../assets/images/slice034a.png'
-import slice035a from '../assets/images/slice035a.png'
 import img9 from '../assets/images/more/9.jpg'
 import p42 from '../assets/images/more/p42.svg'
 
@@ -294,12 +258,7 @@ export default {
     skyline2,
     skyline3,
     img11a,
-    znak1,
-    znak2,
-    znak3,
     officialLogo,
-    p10,
-    officialLogoOnlyPic,
     officialLogoOnlyPicShadow,
     officialLogoOnlyPicShadow2,
     a14,
@@ -307,51 +266,15 @@ export default {
     d1,
     d3,
     d3a,
-    slice011,
-    slice012,
-    slice013,
-    slice014,
-    slice015,
-    slice021,
-    slice022,
-    slice023,
-    slice024,
-    slice025,
-    slice031,
-    slice032,
-    slice033,
-    slice034,
-    slice035,
-    slice011a,
-    slice012a,
-    slice013a,
-    slice014a,
-    slice015a,
-    slice021a,
-    slice022a,
-    slice023a,
-    slice024a,
-    slice025a,
-    slice031a,
-    slice032a,
-    slice033a,
-    slice034a,
-    slice035a,
-    facebookIcon,
-    telephoneIcon,
-    mailIcon,
     testArrow,
     pdfSmall,
     pdfBig,
-    cautionPaper3,
     construction15a,
     p5,
-    cranes2,
     p19,
     p4,
     p42,
     aboutUs1,
-    img15a,
     panoramaDark2,
     cautionPaper2,
 
@@ -359,8 +282,7 @@ export default {
 
     // question,
     // caret,
-    // question2,
-    // caret2,
+
     
 
     

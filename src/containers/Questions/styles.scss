@@ -1,8 +1,7 @@
 @use '../../variables';
-// background: url(variables.$path + '/more/p10.svg');
 
 .questions__background {
-    background: url(variables.$path + '/more/p10.svg');
+    background: url(variables.$path + '/more/AboutUsBackground.svg');
     background-size: 70%;
     position: relative;
     z-index: 4;
@@ -24,8 +23,6 @@
     h2 {
         color: white;
         font-size: 2.7rem;
-        // pb: 15px;
-        // borderBottom: 2px solid var(--goldenColor2);
         position: relative;
         width: max-content;
         margin: 20px auto;
@@ -43,15 +40,12 @@
     h4 {
         color: white;
         font-size: 1rem;
-        // pb: 15px;
-        // borderBottom: 2px solid var(--goldenColor2);
         position: relative;
         width: max-content;
         margin: 20px auto;
     };
 };
 .questions__mainContainer_questionBox {
-    // border: 1px solid var(--goldenColor2);
     border-radius: 6px;
     margin: 120px auto;
     

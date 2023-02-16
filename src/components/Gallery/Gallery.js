@@ -7,20 +7,6 @@ import PrismaZoom from 'react-prismazoom'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 
-
-
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 'fit-content',
-    outline: 'none',
-    height: 'fit-content',
-    boxShadow: 24,
-
-  };
-
 const GalleryItem = ({item}) => {
 const [open, setOpen] = useState(false);    
 const onOpenModal = () => setOpen(true);
@@ -66,19 +52,19 @@ const Gallery = ({columns, title, pictures, trafficSign}) => {
             <div className='gallery__mainContainer_flex'>
                 <div>
                     <h2>Facebook:</h2>
-                    <img style={{fill: 'red', height: '60px'}} src={images.facebookIcon} alt='facebook' />
+                    <img style={{fill: 'red', height: '60px'}} src={process.env.PUBLIC_URL + '/facebook.svg'} alt='facebook' />
                     
                     <h3>szafran-projekt</h3>
                 </div>
                 <div>
                     <h2>Email:</h2>
-                    <img src={images.mailIcon} alt='email' />
+                    <img src={process.env.PUBLIC_URL + '/envelope-fill.svg'} alt='email' />
                     
                     <h3>szaf.waldemar@gmail.com</h3>
                 </div>
                 <div>
                 <h2>Telefon:</h2>
-                    <img src={images.telephoneIcon} alt='phone' />
+                    <img src={process.env.PUBLIC_URL + '/telephone-fill.svg'} alt='phone' />
                     
                     <h3>+48 502 494 555</h3>
                 </div>

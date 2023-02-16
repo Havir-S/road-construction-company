@@ -2,7 +2,6 @@ import React from 'react'
 import { Modal } from 'react-responsive-modal';
 
 const LoadingPage = ({open, onCloseModal}) => {
-  console.log(open)
   return (
     <div>
       <Modal open={open} onClose={onCloseModal} center>

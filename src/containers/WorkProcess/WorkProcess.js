@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import workProcessStyles from './styles.js'
 
 import gsap from 'gsap'
 import './styles.scss'

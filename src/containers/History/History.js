@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import historyStyles from './styles'
 import { HistoryMediaCard } from '../../components';
 import {images} from '../../constants'
 import gsap from 'gsap'
@@ -31,31 +30,31 @@ const History = () => {
    } ,[])
 
   return (
-    <div sx={historyStyles.history__mainBackground} className='history__mainBackground' id='history'>
+    <div className='history__mainBackground' id='history'>
     <div className='background_shadow' />
-      <div sx={historyStyles.history__title} className='history__title'>
+      <div  className='history__title'>
         <h2>Historia</h2>
       </div>
-      <div sx={historyStyles.history__mainHolder} className='history__mainHolder'>
+      <div className='history__mainHolder'>
         <div className='timeline-item'>
           <div className='timeline' />
-          <HistoryMediaCard image={images.aboutUs1} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
+          <HistoryMediaCard image={process.env.PUBLIC_URL + 'aboutUs.jpg'} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
         </div>
         <div className='timeline-item'>
           <div className='timeline' />
-          <HistoryMediaCard image={images.aboutUs1} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
+          <HistoryMediaCard image={process.env.PUBLIC_URL + 'aboutUs.jpg'} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
         </div>
         <div className='timeline-item'>
           <div className='timeline' />
-          <HistoryMediaCard image={images.aboutUs1} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
+          <HistoryMediaCard image={process.env.PUBLIC_URL + 'aboutUs.jpg'} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
         </div>
         <div className='timeline-item'>
           <div className='timeline' />
-          <HistoryMediaCard image={images.aboutUs1} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
+          <HistoryMediaCard image={process.env.PUBLIC_URL + 'aboutUs.jpg'} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
         </div>
         <div className='timeline-item'>
           <div className='timeline' />
-          <HistoryMediaCard image={images.aboutUs1} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
+          <HistoryMediaCard image={process.env.PUBLIC_URL + 'aboutUs.jpg'} date='22.06.2012' title='Bieg Włosika' text='Impreza sportowa odbyła się w Krakowie w czerwcu 2012r. Projekt został wykonany dla ...... Całość trwała miesiąc.'/>
         </div>
       </div>
     </div>

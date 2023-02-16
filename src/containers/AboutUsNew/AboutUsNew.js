@@ -1,5 +1,4 @@
 import React, {useRef, useEffect, useState} from 'react'
-import aboutUsStyles from './styles.js';
 // import { Box, Container, Typography, Grid, Modal, Button } from '@mui/material'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
@@ -174,7 +173,7 @@ const AboutUsNew = () => {
             <div className='aboutUs__mainContainer_containerLeft_holder'>
 
               <div className='aboutUs__mainContainer_titleHolder' data-showup='vertical'>
-                <img src={images.officialLogoOnlyPic} alt='LOGO' />
+                <img src={process.env.PUBLIC_URL + '/officialLogoOnlyPic.png'} alt='LOGO' />
                 <p>Kim jesteśmy</p>
               </div>
               <div className='aboutUs__mainContainer_subTitle'  data-showup='vertical'>
@@ -204,25 +203,25 @@ const AboutUsNew = () => {
               <div>
                 <div className='aboutUs__picturesHolder'>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={images.slice011a} alt='slice' data-slice='1' data-slice-pic='1' />
-                    <img src={images.slice012a} alt='slice' data-slice='2' data-slice-pic='1' />
-                    <img src={images.slice013a} alt='slice' data-slice='3' data-slice-pic='1' />
-                    <img src={images.slice014a} alt='slice' data-slice='4' data-slice-pic='1' />
-                    <img src={images.slice015a} alt='slice' data-slice='5' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice011a.png'} alt='slice' data-slice='1' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice012a.png'} alt='slice' data-slice='2' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice013a.png'} alt='slice' data-slice='3' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice014a.png'} alt='slice' data-slice='4' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice015a.png'} alt='slice' data-slice='5' data-slice-pic='1' />
                   </div>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={images.slice021a} alt='slice' data-slice='1' data-slice-pic='2' />
-                    <img src={images.slice022a} alt='slice' data-slice='2' data-slice-pic='2' />
-                    <img src={images.slice023a} alt='slice' data-slice='3' data-slice-pic='2' />
-                    <img src={images.slice024a} alt='slice' data-slice='4' data-slice-pic='2' />
-                    <img src={images.slice025a} alt='slice' data-slice='5' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice021a.png'} alt='slice' data-slice='1' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice022a.png'} alt='slice' data-slice='2' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice023a.png'} alt='slice' data-slice='3' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice024a.png'} alt='slice' data-slice='4' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice025a.png'} alt='slice' data-slice='5' data-slice-pic='2' />
                   </div>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={images.slice031a} alt='slice' data-slice='1' data-slice-pic='3' />
-                    <img src={images.slice032a} alt='slice' data-slice='2' data-slice-pic='3' />
-                    <img src={images.slice033a} alt='slice' data-slice='3' data-slice-pic='3' />
-                    <img src={images.slice034a} alt='slice' data-slice='4' data-slice-pic='3' />
-                    <img src={images.slice035a} alt='slice' data-slice='5' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice031a.png'} alt='slice' data-slice='1' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice032a.png'} alt='slice' data-slice='2' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice033a.png'} alt='slice' data-slice='3' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice034a.png'} alt='slice' data-slice='4' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice035a.png'} alt='slice' data-slice='5' data-slice-pic='3' />
                   </div>
 
               </div>                

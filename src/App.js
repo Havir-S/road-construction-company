@@ -1,9 +1,8 @@
-import React, { useEffect, useState, createContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import { LoadingPage } from './containers/index.js'
 import { Navbar, Hero, AboutUs, AboutUsNew, Services, Questions, Contact, Referendum, Gallery, History, WorkProcess, Footer } from './containers/index.js'
 import {} from './components'
 
-const ChosenServiceContext = createContext();
 
 // import { ThemeProvider } from '@mui/material/styles';
 // import themeOptions from './theme.js'
@@ -13,16 +12,17 @@ const App = () => {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const [chosenService, setChosenService] = useState("");
 
   const [loading, toggleLoading] = useState(true);
 
+  const onPageLoad = () => {
+    toggleLoading(false);
+    onCloseModal();
+    // document.querySelector('body').style.overflow = 'visible';
+  }
+
   useEffect(() => {
-    const onPageLoad = () => {
-      toggleLoading(false);
-      onCloseModal();
-      // document.querySelector('body').style.overflow = 'visible';
-    }
+    
 
     if (document.readyState === 'complete') {
       onPageLoad();
@@ -31,7 +31,7 @@ const App = () => {
 
       return () => window.removeEventListener('load', onPageLoad);
     }
-  })
+  }, [])
 
   return (
 
@@ -39,7 +39,6 @@ const App = () => {
     {loading ? <LoadingPage open={open}/> : ''}
       
       <div className='App'>
-      <ChosenServiceContext.Provider value={{chosenService, setChosenService}}>
           <Navbar />
           <Hero />
           <AboutUsNew />
@@ -49,7 +48,6 @@ const App = () => {
           <WorkProcess />
           <History />
           <Footer />
-        </ChosenServiceContext.Provider>
       </div>
     </>
 
@@ -57,5 +55,3 @@ const App = () => {
 }
 
 export default App;
-
-export {ChosenServiceContext};

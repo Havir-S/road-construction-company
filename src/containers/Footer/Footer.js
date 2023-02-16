@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import footerStyles from './styles'
 import {images} from '../../constants'
 import gsap from 'gsap'
 import './styles.scss'
@@ -38,13 +37,13 @@ const Footer = () => {
    } ,[])
 
   return (
-    <div sx={footerStyles.footer__background} className='footer__background' id='footer'>
+    <div  className='footer__background' id='footer'>
     
-      <img src={images.img15a} alt='img' className='img-background' />
-      <div sx={footerStyles.footer__mainContainer} className='footer__mainContainer'>
-        <div sx={footerStyles.footer__mainContainer_cta} className='footer__mainContainer_cta'>
-          <div sx={footerStyles.footer__mainContainer_cta_background} className='footer__mainContainer_cta_background' />
-          <div sx={footerStyles.footer__mainContainer_cta_box} className='footer__mainContainer_cta_box'>
+      <img src={process.env.PUBLIC_URL + '15a.png'} alt='img' className='img-background' />
+      <div  className='footer__mainContainer'>
+        <div className='footer__mainContainer_cta'>
+          <div  className='footer__mainContainer_cta_background' />
+          <div  className='footer__mainContainer_cta_box'>
             <h2 variant='h2'>Zaczynamy współpracę?</h2>
             <div>
               <button className="button button--telesto footerButton" onClick={() => {gsap.to(window, {duration: 1.5, scrollTo: {y :`#services`,  offsetY: 50, autoKill: true}, ease: "power2" });}}><span>Sprawdź usługi</span></button>
@@ -56,12 +55,12 @@ const Footer = () => {
         </div>
         <div className='footer__mainContainer_box'>
           <div className='footer-box footer-logo-holder '>
-            <img src={images.officialLogo} alt='logo' className='footerContent footer-logo' />
+            <img src={process.env.PUBLIC_URL + 'officialLogo.png'} alt='logo' className='footerContent footer-logo' />
           </div>
           <div className='footer-box'>
             <div className='footerContent footerContentAlt'>
               <h3 variant='h3'>Linki</h3>
-              <img src={images.cautionPaper3} alt='' className='footer-link-cautionPaper' />
+              <img src={process.env.PUBLIC_URL + 'cautionPaper3.png'} alt='' className='footer-link-cautionPaper' />
               <a href='/'>Usługi</a>
               <a href='/'>Kontakt</a>
               <a href='/'>Pytania</a>
@@ -70,14 +69,14 @@ const Footer = () => {
             </div>   
             <div className='footerContent'>
               <h3 variant='h3'>Adres</h3>
-              <img src={images.cautionPaper3} alt='' className='footer-link-cautionPaper' />
+              <img src={process.env.PUBLIC_URL + 'cautionPaper3.png'} alt='' className='footer-link-cautionPaper' />
               <p>Świątniki Górne</p>
               <p>32-040</p>
               <p>ul. Polna 1</p>
             </div>        
             <div className='footerContent'>
               <h3 variant='h3'>Kontakt</h3>
-              <img src={images.cautionPaper3} alt='' className='footer-link-cautionPaper' />
+              <img src={process.env.PUBLIC_URL + 'cautionPaper3.png'} alt='' className='footer-link-cautionPaper' />
               <p>Telefon: +48 502 494 555</p>
               <p>Email: <span>szaf.waldemar@gmail.com</span></p>
               <p>Facebook: <span>www.facebook.pl/szafranprojekt</span></p>

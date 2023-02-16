@@ -36,8 +36,8 @@ const Hero = () => {
   return (
     <div className='hero__background' id='hero'>
       <div className='hero__background_picture_holder' >
-        <div className='hero__background_picture_main' ref={mainPic}></div>
-        <div className='hero__background_picture2'></div>
+        <div className='hero__background_picture_main' ref={mainPic} />
+        <div className='hero__background_picture2' />
       </div>
 
     

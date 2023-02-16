@@ -1,13 +1,10 @@
-import React, {useEffect, useState, useContext} from 'react'
-import contactStyles from './styles'
+import React, {useEffect} from 'react'
 import './styles.scss'
 
 
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
 import {images} from '../../constants'
-import { WriteToUs } from '../../components';
 
 const Contact = () => {
       
@@ -54,21 +51,21 @@ const Contact = () => {
             
             <div className='contact__row'>
             <div className='contactDiv contactZnak1'>
-                <img src={images.znak1} alt=''/>
+                <img src={process.env.PUBLIC_URL + 'znak1.png'} alt=''/>
                 <div className='contactInfo'>
                     <p style={{ color: 'white'}}>Telefon:</p>
                     <p style={{ color: 'var(--goldenColor2)'}}>+48 502 494 555</p>
                 </div>
             </div>
             <div className='contactDiv contactZnak2'>
-                <img src={images.znak2} alt=''/>
+                <img src={process.env.PUBLIC_URL + 'znak2.png'} alt=''/>
                 <div className='contactInfo'>
                     <p style={{ color: 'white'}}>Facebook:</p>
                     <p style={{ color: 'var(--goldenColor2)'}}>szafran-projekt</p>
                 </div>
             </div>
             <div className='contactDiv contactZnak3'>
-                <img src={images.znak3} alt=''/>
+                <img src={process.env.PUBLIC_URL + 'znak3.png'} alt=''/>
                 <div className='contactInfo'>
                     <p style={{ color: 'white'}}>Email:</p>
                     <p style={{ color: 'var(--goldenColor2)'}}>szaf.waldemar@gmail.com</p>
@@ -92,7 +89,7 @@ const Contact = () => {
 
         </div>
 
-        <div style={{marginTop: '50px'}} className='contact__boxBreak'></div>
+        <div style={{marginTop: '50px'}} className='contact__boxBreak' />
 
     </div>
   )

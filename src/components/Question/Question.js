@@ -1,5 +1,4 @@
 import React from 'react'
-import { images } from '../../constants';
 
 const Question = ({question, answer}) => {
   return (
@@ -7,11 +6,11 @@ const Question = ({question, answer}) => {
                 <div className='question_accordion question'>
                   <div className='question_accordion_summary'>
                     <div className='question_accordion_helpCenterIcon'>
-                      <img src={images.question2} alt='questionMark' />
+                      <img src={process.env.PUBLIC_URL + 'question2.svg'} alt='' />
                     </div>
                     <p>{question}</p>
                     <div className='question_accordion_openIcon'>
-                      <img src={images.caret2} alt='questionMark' />
+                      <img src={process.env.PUBLIC_URL + 'caret2.svg'} alt='' />
                     </div>
                   </div>
                   <div className='question_accordion_details'>

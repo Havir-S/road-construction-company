@@ -7,14 +7,12 @@ import HistoryMediaCard from './historyMediaCard/historyMediaCard'
 import {Gallery} from './Gallery/Gallery'
 import Hamburger from './Hamburger/Hamburger'
 import Question from './Question/Question'
-import WriteToUs from './WriteToUs/WriteToUs'
 
 export {
     // DarkModeSwitch,
     Gallery,
     Hamburger,
     Question,
-    WriteToUs,
 
     // ContactIcons,
     // NavbarOnScroll,

@@ -18,7 +18,7 @@
         font-size: 4.8rem;
     }
     h3 {
-        font-family: Saira, Roboto;
+        font-family: Saira, Roboto, sans-serif;
         margin-top: 30px;
         font-size: 2.5rem
     }
@@ -120,7 +120,6 @@ h2, h4 {
 
 @media only screen and (max-width: 1490px) {
     .workProcess__workContainer_textContainer {
-        // border: 1px solid orange;
         width: 100%;
         h2 {
             width: 100%;
@@ -149,7 +148,6 @@ h2, h4 {
             font-size: 4rem;
         }
         h3 {
-            font-family: Saira, Roboto;
             margin-top: 30px;
             font-size: 1.8rem
         }

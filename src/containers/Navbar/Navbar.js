@@ -2,17 +2,14 @@ import React, {useState, useEffect, useRef} from 'react'
 import navbarStyles from './styles';
 import './styles.scss';
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 // import {PolishFlag, DarkModeSwitch, Hamburger} from '../../components'
-import {PolishFlag, Hamburger} from '../../components'
+import {Hamburger} from '../../components'
 import {navbarLinks, images} from '../../constants'
+
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-
-
-
 
 const Navbar = () => {
   // const [hamburger, toggleHamburger] = useState(true);
@@ -76,29 +73,6 @@ const Navbar = () => {
     }})
     }
 
-   
-
-    // rgb(6, 8, 14);
-    // position: fixed;
-    // background: variables.$backgroundColor;
-    // left: 0;
-    // width: 90%;
-    // z-index: 10;
-    // height: 76px;
-    // appBarHamburgerMenu
-    //HAMBURGER MENU IF CAUTION PAPER IS ON
-    // gsap.to(appBarHamburgerMenu, {duration: .5, position: 'fixed', height: '75px', width: '90%', left: 0, background: 'rgba(6, 8, 14, 1)', 
-    //   scrollTrigger: {
-    //     trigger: '#hero',
-    //     start: '30% 10%',
-    //     endTrigger:"html",
-    //      end:"bottom top",
-    //     toggleActions: 'play reverse reverse reverse',
-    //     toggleClass: { targets: '.app-toolbar', className: 'navBar-sticky'},
-    //     // markers: true
-    // }})
-
-
     //CAUTION PAPER
     gsap.to(caution, {duration: .1, display: 'block', scrollTrigger: {
       trigger: '#aboutUs',
@@ -116,17 +90,14 @@ const Navbar = () => {
       <div className='appBar' ref={appBarRef} id='appBar' style={{height: '76px'}}>
         <div className='app-toolbar' sx={{justifyContent: 'space-between'}}>
           <div className='img-holder'>
-            <img src={images.officialLogo} alt='logo' height='70' style={{verticalAlign: 'middle'}} />
+            <img src={process.env.PUBLIC_URL + '/officialLogo.png'} alt='' height='70' style={{verticalAlign: 'middle'}} />
           </div>
           <div sx={navbarStyles.links} className='links'>
             {navbarLinks.map(link  => (<a className='a_link' href="javascript:void(0);" key={link.name} data-linkto={link.id} onClick={(e) => moveToSection(e.target)}>{link.name}</a>))}
-            <div sx={navbarStyles.flagBox} className='flagBox'>
-            {/* FLAG */}
+            {/* <div sx={navbarStyles.flagBox} className='flagBox'>
               <PolishFlag />
-            </div>
+            </div> */}
             <div sx={navbarStyles.modeBox} className='modeBox'>
-            {/* DARK/LIGHT */}
-            {/* <DarkModeSwitch /> */}
             </div>
             <Hamburger handleHamburger={handleHamburger} hamburgerState={hamburgerState} />
           </div>
@@ -137,9 +108,8 @@ const Navbar = () => {
         <div className='cautionPaperFake' ref={cautionPaper}></div>
       </div>
       <div ref={appBarHamburgerMenuRef} className={'hamburgerNavbar ' + (hamburgerState ? 'hamburgerNavbar-active' : '')}>
-          {/* <img src={images.construction13} alt='' /> */}
           <div className='hamburgerNavbarMenu'>
-            <Hamburger handleHamburger={handleHamburger} hamburgerState={hamburgerState} />
+            <span className='hamburgerNavbarMenu_exit' onClick={() => {setHamburgerState(false)}}>X</span>
             {navbarLinks.map(link  => (<a className='hamburger_link' href="javascript:void(0);" key={link.name} data-linkto={link.id} onClick={(e) => moveToSection(e.target)}>{link.name}</a>))}
           </div>
       </div>
