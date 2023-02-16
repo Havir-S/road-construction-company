@@ -1,5 +1,4 @@
 import React from 'react'
-
 const HistoryMediaCard = ({image, date, title, text}) => {
     return (
             <div  className='historyCard' >
@@ -18,8 +17,6 @@ const HistoryMediaCard = ({image, date, title, text}) => {
                     </div>
                 </div>
             </div>
-
-
       );
 }
 

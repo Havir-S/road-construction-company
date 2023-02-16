@@ -1,35 +1,13 @@
-import React, {useRef, useEffect, useState} from 'react'
-// import { Box, Container, Typography, Grid, Modal, Button } from '@mui/material'
+import React, {useRef, useEffect} from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
-// import {Gallery, Referendum, ContactIcons} from '../../components'
 import {Gallery } from '../../components'
-import {images} from '../../constants'
 import './styles.scss'
-
 
 gsap.registerPlugin(ScrollTrigger)
 
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
 const AboutUsNew = () => {
     const cautionPaper = useRef(null);
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-
-    
 
     useEffect(() => {
         const caution = cautionPaper.current;
@@ -40,24 +18,19 @@ const AboutUsNew = () => {
         // STICKY TAPE
         gsap.to(caution, {position: 'sticky', top: `${76}px`, height: '20px'})
 
-
         //VERTICAL ITEMS SHOWING UP
         gsap.from(verticalShowup, {position: 'relative', scale: .6, bottom: '-50px', filter: 'blur(5px)', webkitFilter: 'blur(20px)', opacity: 0, autoAlpha: 0, duration: 1, stagger: .2,
         scrollTrigger: {
           trigger: '#aboutUs',
           start: 'top 80%',
-          // markers: true
         }
       })
-
-
 
       //HORIZONTAL ITEMS SHOWING UP
       gsap.from(horizontalShowup, {position: 'relative', left: '-100%', filter: 'blur(5px)', webkitFilter: 'blur(20px)', opacity: 0, autoAlpha: 0, duration: 1,  ease: 'Power3.easeOut', stagger: .2,
       scrollTrigger: {
         trigger: '#aboutUs',
         start: 'top 80%',
-        // markers: true
       }
     })
 
@@ -66,7 +39,6 @@ const AboutUsNew = () => {
     scrollTrigger: {
       trigger: '#aboutUs',
       start: 'top 80%',
-      // markers: true
     }
   })
 
@@ -97,19 +69,12 @@ const AboutUsNew = () => {
                 // markers: true
             }
         })
-        
         }
-      
         // tablet
         else if(mql2.matches) {
 
-
         }
       }
-
-
-    
-
       // slices animation  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
       const slices1 = document.querySelectorAll('[data-slice-pic="1"]');
@@ -139,31 +104,31 @@ const AboutUsNew = () => {
 
       }, [])
 
-      const picturesGaleria=[{
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      },
-      {
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      },
-      {
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      },
-      {
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      },
-      {
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      },
-      {
-        img: images.pdfSmall,
-        bigImg: images.pdfBig
-      }
-    ]
+    //   const picturesGaleria=[{
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   },
+    //   {
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   },
+    //   {
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   },
+    //   {
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   },
+    //   {
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   },
+    //   {
+    //     img: images.pdfSmall,
+    //     bigImg: images.pdfBig
+    //   }
+    // ]
 
   return (
     <div className='aboutUs__background' id='aboutUs' >
@@ -183,19 +148,12 @@ const AboutUsNew = () => {
                 Pracujemy nad małymi i dużymi projektami. Szybki remont, a także maraton.
                 </p>
               </div>
-
               <div className='cautionPaper-small' data-showup='horizontal'/>
-
-              <Gallery title={'Galeria'} columns={3} pictures={picturesGaleria} trafficSign='a14' />
-
+              <Gallery title={'Galeria'} columns={3}  trafficSign='a14' />
               <div className='cautionPaper-small'  data-showup='horizontal'/>
-
-              <Gallery title={'Referencje'} columns={3} pictures={picturesGaleria} trafficSign='a30' />
-              
+              <Gallery title={'Referencje'} columns={3}  trafficSign='a30' />
               <div className='cautionPaper-small'  data-showup='horizontal'/>
-
               <Gallery title={'Kontakt'}  trafficSign='d1' />
-              
             </div>
           </div>
           <div className='aboutUs__mainContainer_containerRight' style={{position: 'relative'}}>
@@ -203,44 +161,40 @@ const AboutUsNew = () => {
               <div>
                 <div className='aboutUs__picturesHolder'>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={process.env.PUBLIC_URL + '/slice011a.png'} alt='slice' data-slice='1' data-slice-pic='1' />
-                    <img src={process.env.PUBLIC_URL + '/slice012a.png'} alt='slice' data-slice='2' data-slice-pic='1' />
-                    <img src={process.env.PUBLIC_URL + '/slice013a.png'} alt='slice' data-slice='3' data-slice-pic='1' />
-                    <img src={process.env.PUBLIC_URL + '/slice014a.png'} alt='slice' data-slice='4' data-slice-pic='1' />
-                    <img src={process.env.PUBLIC_URL + '/slice015a.png'} alt='slice' data-slice='5' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice011b.png'} alt='slice' data-slice='1' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice012b.png'} alt='slice' data-slice='2' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice013b.png'} alt='slice' data-slice='3' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice014b.png'} alt='slice' data-slice='4' data-slice-pic='1' />
+                    <img src={process.env.PUBLIC_URL + '/slice015b.png'} alt='slice' data-slice='5' data-slice-pic='1' />
                   </div>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={process.env.PUBLIC_URL + '/slice021a.png'} alt='slice' data-slice='1' data-slice-pic='2' />
-                    <img src={process.env.PUBLIC_URL + '/slice022a.png'} alt='slice' data-slice='2' data-slice-pic='2' />
-                    <img src={process.env.PUBLIC_URL + '/slice023a.png'} alt='slice' data-slice='3' data-slice-pic='2' />
-                    <img src={process.env.PUBLIC_URL + '/slice024a.png'} alt='slice' data-slice='4' data-slice-pic='2' />
-                    <img src={process.env.PUBLIC_URL + '/slice025a.png'} alt='slice' data-slice='5' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice021b.png'} alt='slice' data-slice='1' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice022b.png'} alt='slice' data-slice='2' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice023b.png'} alt='slice' data-slice='3' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice024b.png'} alt='slice' data-slice='4' data-slice-pic='2' />
+                    <img src={process.env.PUBLIC_URL + '/slice025b.png'} alt='slice' data-slice='5' data-slice-pic='2' />
                   </div>
                   <div className='aboutUs__picturesHolder_slicesHolder'>
-                    <img src={process.env.PUBLIC_URL + '/slice031a.png'} alt='slice' data-slice='1' data-slice-pic='3' />
-                    <img src={process.env.PUBLIC_URL + '/slice032a.png'} alt='slice' data-slice='2' data-slice-pic='3' />
-                    <img src={process.env.PUBLIC_URL + '/slice033a.png'} alt='slice' data-slice='3' data-slice-pic='3' />
-                    <img src={process.env.PUBLIC_URL + '/slice034a.png'} alt='slice' data-slice='4' data-slice-pic='3' />
-                    <img src={process.env.PUBLIC_URL + '/slice035a.png'} alt='slice' data-slice='5' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice031b.png'} alt='slice' data-slice='1' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice032b.png'} alt='slice' data-slice='2' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice033b.png'} alt='slice' data-slice='3' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice034b.png'} alt='slice' data-slice='4' data-slice-pic='3' />
+                    <img src={process.env.PUBLIC_URL + '/slice035b.png'} alt='slice' data-slice='5' data-slice-pic='3' />
                   </div>
-
               </div>                
               </div>
               <div className='cautionPaper-small' style={{marginTop: '-10px'}}/>
             </div>
           </div>
         </div>
-
         <div className='aboutUs__mainContainer_callToAction'>
           <p>ZACZNIJMY WSPÓŁPRACOWAĆ</p>
           <div>
           </div>
         </div>
-
         <div className='aboutUs__mainContainer_cautionPaperBig'>
           <div className='caution-arrow' />
         </div>
-
         <div className='aboutUs__mainContainer_break'>
           <div className='content'>
             <div className='content__container'>

@@ -1,10 +1,6 @@
 import React, {useEffect} from 'react'
 import './styles.scss'
-
-
-
 import gsap from 'gsap'
-import {images} from '../../constants'
 
 const Contact = () => {
       
@@ -18,7 +14,6 @@ const Contact = () => {
       scrollTrigger: {
         trigger: '#contact',
         start: 'top 80%',
-        // markers: true
       }
     })
 
@@ -26,7 +21,6 @@ const Contact = () => {
         scrollTrigger: {
             trigger: '#contact',
             start: 'top 80%',
-            // markers: true
         }
         })
 
@@ -34,10 +28,8 @@ const Contact = () => {
         scrollTrigger: {
             trigger: '#contact',
             start: 'top 80%',
-            // markers: true
         }
         })
-
     }, [])
 
   return (
@@ -74,9 +66,6 @@ const Contact = () => {
             </div>
 
             {/* <div sx={contactStyles.contact__secondRow} className='contact__secondRow'>
-            
-                
-
                 <div sx={contactStyles.contact__googleMapsBox}  className='contact__googleMapsBox contactZnak3'>
                     <div className='contact__googleMapsBox_info'>
                         <p>	&#129145; Świątniki Górne</p>
@@ -86,11 +75,8 @@ const Contact = () => {
                     <img src={images.mapTest} alt='googleMaps' />
                 </div>
             </div> */}
-
         </div>
-
         <div style={{marginTop: '50px'}} className='contact__boxBreak' />
-
     </div>
   )
 }

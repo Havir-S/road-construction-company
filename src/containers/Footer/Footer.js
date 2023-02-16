@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import {images} from '../../constants'
 import gsap from 'gsap'
 import './styles.scss'
 const Footer = () => {
@@ -8,20 +7,12 @@ const Footer = () => {
     const znakKoniec = document.querySelectorAll('.img-background')
     const footerContent = document.querySelectorAll('.footerContent')
 
-    // gsap.from(historyItems, {position: 'absolute', stagger: .4, bottom: '-20px', scale: .7, webkitFilter: 'blur(20px)', opacity: 0, autoAlpha: 0, duration: 1.3,  ease: 'Power3.easeOut',
-    //   scrollTrigger: {
-    //     trigger: (i) => {console.log(i)},
-    //     start: 'top 80%',
-    //     markers: true
-    //   }
-    // })
 
 
       gsap.from(znakKoniec, { position: 'relative', top: '400px', webkitFilter: 'blur(40px)', filter: 'blur(40px)', opacity: 1, autoAlpha: 1, duration: 1.5,  ease: 'Power3.easeOut',
       scrollTrigger: {
         trigger: '#footer',
         start: 'top 80%',
-        // markers: true
       }
     })
 
@@ -29,7 +20,6 @@ const Footer = () => {
       scrollTrigger: {
         trigger: footerContent,
         start: 'top bottom',
-        // markers: true
       }
     })
 
@@ -39,7 +29,7 @@ const Footer = () => {
   return (
     <div  className='footer__background' id='footer'>
     
-      <img src={process.env.PUBLIC_URL + '15a.png'} alt='img' className='img-background' />
+      <img src={process.env.PUBLIC_URL + '15aa.png'} alt='img' className='img-background' />
       <div  className='footer__mainContainer'>
         <div className='footer__mainContainer_cta'>
           <div  className='footer__mainContainer_cta_background' />

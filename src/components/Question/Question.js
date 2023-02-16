@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Question = ({question, answer}) => {
   return (
     <div className='questions__mainContainer_questionBox_hold accordion-holder'>

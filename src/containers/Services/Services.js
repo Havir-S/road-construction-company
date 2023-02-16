@@ -1,9 +1,8 @@
 
-import React, {useEffect, useRef, useState, useContext } from 'react'
+import React, {useEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
 import './styles.scss'
-import {images} from '../../constants'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -113,11 +112,11 @@ const Services = () => {
       </div>
       <div className='servicesHolder__bottom'>
         <div className='servicesHolder__bottom_houses' ref={housesContainer}>
-          <div data-skyline='skyline3' style={{backgroundImage: `url(${images.skyline3})`, }} />
+          <div data-skyline='skyline3' style={{backgroundImage: `url(skyline3.png)`, }} />
         </div>
         <div className='servicesHolder__bottom_background'>
           <p> Skyline art by <a target='_blank' href='https://www.vecteezy.com/?utm_source=vecteezy-download&utm_medium=license-info-pdf&utm_campaign=license-info-document'>Vecteezy</a></p>
-          <img src={process.env.PUBLIC_URL + '/cranes2.png'} alt='' />
+          <img src={process.env.PUBLIC_URL + '/cranes2a.png'} alt='' />
         </div>
       </div>
     </div>

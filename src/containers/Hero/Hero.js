@@ -1,11 +1,9 @@
 
 import React, {useEffect, useRef} from 'react'
-import heroStyles from './styles'
 import './styles.scss'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap'
 
-import {images} from '../../constants'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -22,14 +20,12 @@ const Hero = () => {
     gsap.to(scroll, {duration: 1, transform: 'scale(2)', y: 300, opacity: 0, webkitFilter: 'blur(20px)', scrollTrigger: {
       trigger: '#hero',
       start: '25% 10%',
-      // markers: true
     }})
 
     const tl = gsap.timeline();
     tl.from(pic, {opacity: 0, duration: 1, transform: 'scale(1.05)', ease: 'linear'})
       .to(pic, {transform: 'scale(1.5)', duration: 16, repeat: -1, ease: 'linear'})
 
-      // gsap.to(pic, {backgroundImage: `url(${images.panorama2})`, duration: 2}, {backgroundImage: `url(${images.panorama3})`, duration: 2})
       gsap.from(container, {y: 70, opacity: 0, duration: 1, webkitFilter: 'blur(20px)'})
   }, [])
 
@@ -37,6 +33,7 @@ const Hero = () => {
     <div className='hero__background' id='hero'>
       <div className='hero__background_picture_holder' >
         <div className='hero__background_picture_main' ref={mainPic} />
+        <div className='hero__background_picture1' />
         <div className='hero__background_picture2' />
       </div>
 
@@ -61,11 +58,11 @@ const Hero = () => {
         <div className='hero_chevron' ref={scrollDown}>
           <div className='scrolldown'>
             <div className="chevrons">
-              <div className='chevrondown'></div>
-              <div className='chevrondown'></div>
+              <div className='chevrondown' />
+              <div className='chevrondown' />
             </div>
           </div>
-          <div className="arrows"></div>
+          <div className="arrows" />
         </div>
     </div>
   )

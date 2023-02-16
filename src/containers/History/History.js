@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import { HistoryMediaCard } from '../../components';
-import {images} from '../../constants'
 import gsap from 'gsap'
 import './styles.scss'
 
@@ -9,20 +8,12 @@ const History = () => {
   useEffect(() => {
     const historyItems = document.querySelectorAll('.historyCard')
 
-    // gsap.from(historyItems, {position: 'absolute', stagger: .4, bottom: '-20px', scale: .7, webkitFilter: 'blur(20px)', opacity: 0, autoAlpha: 0, duration: 1.3,  ease: 'Power3.easeOut',
-    //   scrollTrigger: {
-    //     trigger: (i) => {console.log(i)},
-    //     start: 'top 80%',
-    //     markers: true
-    //   }
-    // })
 
     historyItems.forEach((el, i) => {
       gsap.from(el, {position: 'absolute', stagger: .4, bottom: '-20px', scale: .7, webkitFilter: 'blur(20px)', opacity: 0, autoAlpha: 0, duration: 1.3,  ease: 'Power3.easeOut',
       scrollTrigger: {
         trigger: el,
         start: 'top 80%',
-        // markers: true
       }
     })
     })

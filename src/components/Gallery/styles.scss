@@ -91,6 +91,11 @@ display: none !important;
 
 .gallery_item {
     position: relative;
+    p {
+
+            
+        margin-left: 115px;
+    }
 }
 
 .section-icon{
@@ -103,18 +108,6 @@ display: none !important;
 };
 
 @media only screen and (max-width: 1660px) {
-    .gallery_item {
-        position: relative;
-
-        
-        p {
-
-            
-            margin-left: 115px;
-        }
-    }
-    
-    
     .gallery__mainContainer_section {
         .section-icon{
             display: inline-block;

@@ -13,7 +13,6 @@ const WorkProcess = () => {
       scrollTrigger: {
         trigger: '#workProcess',
         start: 'top 50%',
-        // markers: true
       }
     })
   }, [])

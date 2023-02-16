@@ -1,18 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react'
-import navbarStyles from './styles';
 import './styles.scss';
 import gsap from 'gsap'
-
-// import {PolishFlag, DarkModeSwitch, Hamburger} from '../../components'
 import {Hamburger} from '../../components'
-import {navbarLinks, images} from '../../constants'
+import {navbarLinks} from '../../constants'
 
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Navbar = () => {
-  // const [hamburger, toggleHamburger] = useState(true);
   const appBarRef = useRef(null)
   const appBarHamburgerMenuRef = useRef(null)
   const [hamburgerState, setHamburgerState] = useState(false);
@@ -45,31 +41,23 @@ const Navbar = () => {
 
   useEffect(() => {
     const appBar = appBarRef.current;
-    const appBarHamburgerMenu = appBarHamburgerMenuRef.current;
     const caution = cautionPaper.current;
-    const links = document.querySelectorAll('[data-linkto]')
-    // console.log(links)
-
-    
-
     const mql = window.matchMedia('screen and (max-width: 900px)');
 
     if (mql.matches) {
       //NAVBAR BECOMES STICKY INSTANTLY --- SMALLER THAN 900PX
-      gsap.to(appBar, {duration: .5, position: 'fixed', top: 0, padding: '10 10 16', margin: 0, background: 'rgb(6, 8, 14)', })
+      gsap.to(appBar, {duration: .5, position: 'fixed', top: 0, padding: '10 10 16', margin: 0, background: 'rgb(6, 8, 22)', })
       document.getElementsByClassName('app-toolbar')[0].classList.add('navBar-sticky')
     } else {
       //NAVBAR REACTS TO SCROLL SCROLL, if below certain point, it becomes FIXED
-      gsap.to(appBar, {duration: .5, position: 'fixed', top: 0, padding: '10 10 6', margin: 0, background: 'rgb(6, 8, 14)', 
+      gsap.to(appBar, {duration: .5, position: 'fixed', top: 0, padding: '10 10 6', margin: 0, background: 'rgb(6, 8, 22)', 
       scrollTrigger: {
         trigger: '#hero',
         start: '30% 10%',
         endTrigger:"html",
          end:"bottom top",
-        //  onUpdate: function() {console.log('a')},
         toggleActions: 'play reverse reverse reverse',
         toggleClass: { targets: '.app-toolbar', className: 'navBar-sticky'},
-        // markers: true
     }})
     }
 
@@ -81,23 +69,19 @@ const Navbar = () => {
       end:"bottom top",
       
       toggleActions: 'play reverse reverse reverse',
-      // markers: true
     }})
 })
   
   return (
       <>
       <div className='appBar' ref={appBarRef} id='appBar' style={{height: '76px'}}>
-        <div className='app-toolbar' sx={{justifyContent: 'space-between'}}>
+        <div className='app-toolbar'>
           <div className='img-holder'>
             <img src={process.env.PUBLIC_URL + '/officialLogo.png'} alt='' height='70' style={{verticalAlign: 'middle'}} />
           </div>
-          <div sx={navbarStyles.links} className='links'>
-            {navbarLinks.map(link  => (<a className='a_link' href="javascript:void(0);" key={link.name} data-linkto={link.id} onClick={(e) => moveToSection(e.target)}>{link.name}</a>))}
-            {/* <div sx={navbarStyles.flagBox} className='flagBox'>
-              <PolishFlag />
-            </div> */}
-            <div sx={navbarStyles.modeBox} className='modeBox'>
+          <div  className='links'>
+            {navbarLinks.map(link  => (<span className='a_link' key={link.name} data-linkto={link.id} onClick={(e) => moveToSection(e.target)}>{link.name}</span>))}
+            <div  className='modeBox'>
             </div>
             <Hamburger handleHamburger={handleHamburger} hamburgerState={hamburgerState} />
           </div>
@@ -110,7 +94,7 @@ const Navbar = () => {
       <div ref={appBarHamburgerMenuRef} className={'hamburgerNavbar ' + (hamburgerState ? 'hamburgerNavbar-active' : '')}>
           <div className='hamburgerNavbarMenu'>
             <span className='hamburgerNavbarMenu_exit' onClick={() => {setHamburgerState(false)}}>X</span>
-            {navbarLinks.map(link  => (<a className='hamburger_link' href="javascript:void(0);" key={link.name} data-linkto={link.id} onClick={(e) => moveToSection(e.target)}>{link.name}</a>))}
+            {navbarLinks.map(link  => (<span className='hamburger_link' key={link.name} data-linkto={link.id} onClick={(e) => {setHamburgerState(false); moveToSection(e.target)}}>{link.name}</span>))}
           </div>
       </div>
       </>
